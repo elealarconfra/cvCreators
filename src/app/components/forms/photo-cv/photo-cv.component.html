@@ -1,0 +1,14 @@
+<div class="photo-cv">
+  <img  width="200px"
+    height="200px"
+    [src]="displayedImage"
+    alt="Photo CV">
+  <input accept="image/*"
+    type="file"
+    id="buttonUpload"
+    style="display: none;"
+    (change)="captureFile($event)">
+  <mat-card-actions>
+    <label for="buttonUpload" mat-button>Adjuntar foto</label>
+  </mat-card-actions>
+</div>
