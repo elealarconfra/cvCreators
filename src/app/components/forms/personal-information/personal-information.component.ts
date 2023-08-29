@@ -4,7 +4,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgIf } from '@angular/common';
 import { PhotoCVComponent } from "../photo-cv/photo-cv.component";
-//import { DataSharingService } from '../data-sharing.service';
 
 
 @Component({
@@ -15,15 +14,13 @@ import { PhotoCVComponent } from "../photo-cv/photo-cv.component";
     imports: [FormsModule, MatFormFieldModule, MatInputModule, NgIf, ReactiveFormsModule, PhotoCVComponent]
 })
 export class PersonalInformationComponent implements OnInit{
-  dataForm!: FormGroup;  // Definición del grupo de formularios
+  dataForm!: FormGroup;
   name:string | undefined ;
 
 
 
   constructor(
-    private formBuilder: FormBuilder,
-    //private dataSharingService: DataSharingServicex
-    ) {}
+    private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     // Inicializar el grupo de formularios en el ngOnInit
@@ -38,6 +35,7 @@ export class PersonalInformationComponent implements OnInit{
   prueba(){
     console.log('alksdhfkjlh');
     console.log(this.dataForm);
+    console.log(this.dataForm.value)
   }
 
   setName(){
